@@ -20,6 +20,17 @@ def get_fixtures():
         return jsonify({'fixtures': fixtures})
     else:
         return jsonify({'error': f"Failed to fetch data. Status code: {response.status_code}"}), 500
-
+    
+@app.route('/get_all_leagues', methods=['GET'])
+def get_all_competitions(): 
+    url = 'https://api.football-data.org/v2/competitions'
+    response = requests.get(url, headers=headers)
+    
+    if response.status_code == 200:
+        competitions = response.json()  # Fix the typo here
+        return jsonify({'competitions': competitions})
+    else:
+        return jsonify({'error': f"Failed to fetch data. Status code: {response.status_code}"}), 500
+    
 if __name__ == '__main__':
     app.run(debug=True)
