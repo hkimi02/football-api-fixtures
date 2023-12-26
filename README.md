@@ -1,3 +1,4 @@
+
 # Football Fixtures API
 
 This project provides a simple API to retrieve football fixtures using the Football Data API.
@@ -35,23 +36,33 @@ These instructions will help you set up and run the project on your local machin
 3. Run the Flask app:
 
    ```bash
-   python app.py
+   python main.py
    ```
 
 4. Open your browser or use a tool like `curl` or Postman to send a GET request:
 
-   ```bash
-   http://127.0.0.1:5000/get_fixtures?league_id=2021
-   ```
+   - Retrieve Premier League fixtures:
 
-   This will return the Premier League fixtures.
+     ```bash
+     http://127.0.0.1:5000/get_fixtures?league_id=2021
+     ```
 
-### API Endpoint
+   - Retrieve a list of all available leagues:
+
+     ```bash
+     http://127.0.0.1:5000/get_all_leagues
+     ```
+
+### API Endpoints
 
 - `/get_fixtures`
   - Method: GET
   - Parameters:
     - `league_id` (required): ID of the football league (e.g., 2021 for Premier League).
+
+- `/get_all_leagues`
+  - Method: GET
+  - Retrieves a list of all available football leagues.
 
 ### Example Response
 
