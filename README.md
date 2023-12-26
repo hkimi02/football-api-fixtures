@@ -30,7 +30,7 @@ These instructions will help you set up and run the project on your local machin
 
 1. Obtain an API key from [Football Data API](https://www.football-data.org/).
 
-2. Replace `'your_api_key'` in `app.py` with your actual API key.
+2. Replace `'your_api_key'` in `main.py` with your actual API key.
 
 3. Run the Flask app:
 
